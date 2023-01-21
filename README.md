@@ -3,3 +3,5 @@
 A collection of Rust exercises from "The Rust Programming Language" online book.
 
 Programmed and edited by me.
+
+*Compiled and run on Windows*
