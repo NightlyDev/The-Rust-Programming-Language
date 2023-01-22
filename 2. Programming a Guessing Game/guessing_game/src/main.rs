@@ -7,8 +7,6 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100); // number generator seeded by the OS
 
-    println!("The secret number is {secret_number}");
-
     loop {
         println!("Please input your guess.");
 
@@ -18,7 +16,10 @@ fn main() {
             .read_line(&mut guess) // &mut -> mutable reference to change contents of variable
             .expect("Failed to read line"); // handles program when Result of read_line is 'Err'
 
-        let guess: u32 = guess.trim().parse().expect("Please type a number!"); // Shadowed a immutable variable from guess - used for conversion
+        let guess: u32 = match guess.trim().parse() { // Shadowed a immutable variable from guess - used for conversion
+            Ok(num) => num,     // if operation wents well
+            Err(_) => continue, // if invalid characters have been put in -> next iteration of the loop
+        };
 
         println!("You guessed : {guess}");
 
