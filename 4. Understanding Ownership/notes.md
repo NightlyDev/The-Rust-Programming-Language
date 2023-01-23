@@ -1,0 +1,1 @@
+## Notes for 3. Understanding Ownership
