@@ -20,7 +20,7 @@ fn main() {
     } else if number % 2 == 0 {
         println!("number is divisible by 2");
     } else {
-        println!("number is not divisible by 4,3 or 2");
+        println!("number is not divisible by 4, 3 or 2");
     }
 
     let condition = true;
@@ -87,12 +87,14 @@ fn main() {
         println!("the value is: {element}");
     }
 
-    for number in (1..4).rev() {    // reverses the number range
+    for number in (1..4).rev() {
+        // reverses the number range
         println!("{number}!");
     }
     println!("LIFTOFF!!!");
 
-    for number in (1..a.len() - 1).rev() {  // gets length of array
+    for number in (1..a.len() - 1).rev() {
+        // gets length of array
         println!("{number}!");
     }
     println!("LIFTOFF!!!");
